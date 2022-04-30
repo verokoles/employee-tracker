@@ -28,10 +28,15 @@ SO THAT I can organize and plan my business."
      npm i express
      ```
      ```
-     $> mysql -u root -p (run MYSQL)
+     $> mysql -u root -p (run MYSQL) 
+     || source db/schema.sql; 
+     || source db/seeds.sql; 
      ```
      ```
      npm install console.table --save
+     ```
+     ```
+     npm i inquirer
      ```
   ## Usage:
 
