@@ -10,7 +10,9 @@ roles, and employees in my company
 SO THAT I can organize and plan my business."
 
 ## WALKTHROUGH VIDEO:video_camera:
-![EMPLOYEE-TRACKER](https://drive.google.com/file/d/1JtuX7dKOZGoSpFUjfXTxdqQSAyysI_UZ/view)
+
+[EMPLOYEE-TRACKER](https://drive.google.com/file/d/1JtuX7dKOZGoSpFUjfXTxdqQSAyysI_UZ/view)
+
 
    ## Table of Contents::mag:
    1. [ Installation ](#installation)
