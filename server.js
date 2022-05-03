@@ -54,8 +54,8 @@ const promptUser = () => {
 } else if (menuChoice === 'Update employee') {
     updateEmployee().then(data => {
        console.log(data);
-})
+});
 };
-    };
+    });
 
 promptUser();
