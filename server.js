@@ -56,5 +56,6 @@ const promptUser = () => {
        console.log(data);
 })
 };
+    };
 
 promptUser();

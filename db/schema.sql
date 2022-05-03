@@ -13,9 +13,9 @@ CREATE TABLE role (
 id INTEGER AUTO_INCREMENT PRIMARY KEY,
 title VARCHAR(30),
 salary DECIMAL,
-departmnet_id INTEGER,
+department_id INTEGER,
 FOREIGN KEY (department_id) references department(id) ON DELETE CASCADE
-};
+);
 
 -- employee names
 CREATE TABLE employee (
@@ -24,6 +24,6 @@ first_name VARCHAR(30),
 last_name VARCHAR(30),
 role_id INTEGER,
 manager_id INTEGER,
-FOREIGN KEY (job_title_id) references job_title(id) ON DELETE CASCADE,
+FOREIGN KEY (role_id) references role(id) ON DELETE CASCADE,
 FOREIGN KEY (manager_id) references employee(id) ON DELETE SET NULL
 );

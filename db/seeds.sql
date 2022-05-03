@@ -2,7 +2,7 @@
 -- no manager = null
 USE employeeDB;
 
-INSERT INTO department (name)
+INSERT INTO department (department_name)
 VALUES ('sales'), ('engineering');
 
 INSERT INTO role
@@ -17,10 +17,10 @@ VALUES
 ('software engineer', 80000, 2);
 
 INSERT INTO employee
-('first_name', 'last_name', role_id, manager_id)
+(first_name, last_name, role_id, manager_id)
 VALUES
 ('Jason', 'Smith', 1, 1),
-('Katie', 'Chang' 2, NULL),
+('Katie', 'Chang', 2, NULL),
 ('Ed', 'Kole', 3, 1),
 ('Monica', 'Brown', 4, 1),
 ('Seth', 'Gard', 5, 1),
@@ -31,14 +31,13 @@ VALUES
 
 -- Left + inner joins so whole table can be seen 
 SELECT employee.id, employee.first_name, 
-employee.last_name, employee_role.title, 
-employee_dept.dept_name, employee_role.salary, 
+employee.last_name, 
 CONCAT(manager.first_name,'', manager.last_name) AS manager
 FROM employee 
 LEFT JOIN employee manager ON manager.id = employee.manager_id
-INNER JOIN employee_Role ON employee.role_id = employee_Role.id
-INNER JOIN employee_Dept ON employee_Dept.id = employee_Role.department_id;
+INNER JOIN role ON employee.role_id = role.id
+INNER JOIN department ON department.id = role.department_id;
 
-SELECT dept_name FROM employee_Dept;
+SELECT department_name FROM department;
 
-SELECT title FROM employee_Role
+SELECT title FROM role;
